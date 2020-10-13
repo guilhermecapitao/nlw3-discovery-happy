@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Proffy" title="Proffy" src=".github/logo.svg" />
+    <img alt="Happy" title="Happy" src=".github/logo.svg" />
 </h1>
 
 <p align="center">
@@ -18,7 +18,7 @@
 <br>
 
 <p align="center">
-  <img alt="Proffy" src=".github/happy.png" width="100%">
+  <img alt="Happy" src=".github/happy.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -28,15 +28,12 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/pt-br/)
 - [SQLite](https://www.sqlite.org/index.html)
-- [Nunjucks](https://mozilla.github.io/nunjucks/)
 
 ## 💻 Projeto
 
 O Happy é um projeto que visa facilitar visitas aos orfanatos próximos a você 💜 
 
 Este é um projeto desenvolvido durante a **[Next Level Week](https://nextlevelweek.com/)**, realizada pela **[@Rocketseat](https://github.com/Rocketseat)** durante os dias 12 a 18 de Outubro de 2020.
-
-Projeto da [Next Level Week 3.0](https://nextlevelweek.com/).
 
 ## 🔖 Layout
 

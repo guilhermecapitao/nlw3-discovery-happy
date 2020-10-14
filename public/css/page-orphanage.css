@@ -3,41 +3,6 @@
     min-height: 100vh;    
 }
 
-aside.sidebar {
-    position: fixed;
-    height: 100%;
-    padding:  32px 24px; /* 3.2rem 2.4rem; */
-    background: #15C3D6;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-aside.sidebar footer button {
-    width: 48px;
-    height: 48px;
-    border: none;
-    background: #12AFCD;
-    border-radius: 1.6rem;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: background 0.2s;
-}
-
-aside.sidebar footer button:hover {
-    background: #17D6EB;
-}
-
-.with-sidebar {
-    padding-left: 110px;;
-}
-
 main {
     flex: 1;
 }
@@ -111,35 +76,6 @@ main {
     margin-top: 2.4rem;
 }
 
-/* map */
-.map-container {
-    margin-top: 6.4rem;
-    background: #E6F7FB;
-    border: 1px solid #B3DAE2;
-    border-radius: 2rem;
-}
-
-#mapid {
-    width: 100%;
-    height: 28rem;
-}
-
-.map-container footer {
-    padding: 2rem 0;
-
-    text-align: center;
-}
-
-.map-container footer a {
-    color: #0089A5;
-    text-decoration: none;
-}
-
-.map-container .leaflet-container {
-    border-bottom: 1px solid #DDE3F0;
-    border-radius: 2rem;
-}
-
 .orphanage-details-content hr {
     width: 100%;
     height: 1px;
@@ -188,33 +124,4 @@ main {
     border-radius: 20px;
 
     color: #37C77F;
-}
-
-.primary-button {
-    margin-top: 6.4rem;
-
-    width: 100%;
-    height: 6.4rem;
-    border: 0;
-
-    cursor: pointer;
-
-    background: #3CDC8C;
-
-    border-radius: 2rem;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: background-color .2s;
-}
-
-.primary-button:hover {
-    background: #36CF82;
-}
-
-.primary-button img {
-    margin-right: 1.6rem;
 }

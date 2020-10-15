@@ -12,7 +12,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',)
 .addTo(map);
 
 const icon = L.icon({
-    iconUrl: "./public/images/map-marker.svg",
+    iconUrl: "/images/map-marker.svg",
     iconSize: [58, 68],
     iconAnchor: [29,68],
     popAnchor: [170, 2]
@@ -41,4 +41,4 @@ function selectImage(event) {
     imageContainer.src = image.src
 
     button.classList.add('active')
-}
+} 

@@ -59,9 +59,9 @@ main h1 {
 /* Desktop version */
 
 @media (min-width: 760px) {
-
   #container {
-    background: url("../images/bg.svg") no-repeat 80% / clamp(30rem, 54vw, 56rem);
+    background: url("../images/bg.svg") no-repeat 80% /
+      clamp(30rem, 54vw, 56rem);
     padding: 5rem 2rem;
   }
 
@@ -86,11 +86,11 @@ main h1 {
 
   main h1 {
     font-weight: bold;
-    line-height: .88;
-   
+    line-height: 0.88;
+
     margin: clamp(10%, 9vh, 12%) 0 4rem;
-    
-    width: min(300px, 80%)
+
+    width: min(300px, 80%);
   }
 
   .visit {
@@ -102,7 +102,7 @@ main h1 {
   .visit p {
     font-size: 2.4rem;
     line-height: 1.5;
-    width: clamp(20rem, 20vw, 30rem)
+    width: clamp(20rem, 20vw, 30rem);
   }
 
   .visit a {

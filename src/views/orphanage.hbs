@@ -1,128 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lar das Meninas | Happy</title>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ orphanage.name }} | Happy</title>
 
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
 
-    <link rel="icon" href="/images/logo-icon.png" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/animations.css" />
-    <link rel="stylesheet" href="/css/sidebar.css" />
-    <link rel="stylesheet" href="/css/map.css" />
-    <link rel="stylesheet" href="/css/buttons.css" />
-    <link rel="stylesheet" href="/css/page-orphanage.css" />
+  <link rel="icon" href="/images/logo-icon.png" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="page-orphanage">
-      <aside class="animate-right sidebar">
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/sidebar.css" />
+  <link rel="stylesheet" href="/css/map.css" />
+  <link rel="stylesheet" href="/css/buttons.css" />
+  <link rel="stylesheet" href="/css/page-orphanage.css" />
 
-        <img src="/images/map-marker.svg" alt="Happy">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
 
-        <footer>
-          <button onclick="history.back()">
-            <img src="/images/arrow-back.svg" alt="Voltar">
+<body>
+  <div id="page-orphanage">
+    <aside class="animate-right sidebar">
+
+      <img src="/images/map-marker.svg" alt="Happy">
+
+      <footer>
+        <button onclick="history.back()">
+          <img src="/images/arrow-back.svg" alt="Voltar">
+        </button>
+      </footer>
+
+    </aside>
+
+    <main class="animate-appear with-sidebar">
+      <div class="orphanage-details">
+        <img src="{{orphanage.firstImage}}" alt="{{orphanage.name}}" />
+
+        <div class="images">
+          {{#each orphanage.images }}
+          <button onclick="selectImage(event)" class="active" type="button">
+            <img src="{{this}}" alt="{{orphanage.name}}" />
           </button>
-        </footer>
+          {{/each}}
 
-      </aside>
-
-      <main class="animate-appear with-sidebar">
-        <div class="orphanage-details">
-          <img src="/images/home.jpg" alt="Lar das meninas" />
-
-          <div class="images">
-            <button onclick="selectImage(event)" class="active" type="button">
-              <img src="https://source.unsplash.com/random?id=1" alt="Lar das meninas" />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img src="https://source.unsplash.com/random?id=2" alt="Lar das meninas" />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img src="https://source.unsplash.com/random?id=3" alt="Lar das meninas" />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img src="https://source.unsplash.com/random?id=4" alt="Lar das meninas" />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img src="https://source.unsplash.com/random?id=5" alt="Lar das meninas" />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img src="https://source.unsplash.com/random?id=6" alt="Lar das meninas" />
-            </button>
-          </div>
-
-          <div class="orphanage-details-content">
-            <h1>Lar das Meninas</h1>
-
-            <p>
-              Presta assistência a crianças de 06 a 15 anos que se encontre em
-              situação de risco e/ou vulnerabilidade social
-            </p>
-
-            <div class="map-container">
-              <div id="mapid"></div>
-              <footer>
-                <a href="">Ver rotas no Google Maps</a>
-              </footer>
-            </div>
-
-            <hr />
-
-            <h2>Instruções para visita</h2>
-
-            <p>
-              Venha como se sentir a vontade e traga muito amor e paciência para
-              dar
-            </p>
-
-            <div class="open-details">
-              <div class="hour">
-                <img src="/images/clock.svg" alt="Horários" />
-                Horário de visitas Das 18h até 8h
-              </div>
-              <div class="open-on-weekends">
-                <img src="/images/info.svg" alt="Informações" />
-                Atendemos fim de semana
-              </div>
-            </div>
-
-            <button class="primary-button" type="button">
-              <img
-                src="/images/whatsapp.svg"
-                alt="Chamar no whatsapp"
-              />
-              Entrar em contato
-            </button>
-          </div>
         </div>
-      </main>
-    </div>
 
-    <script src="/scripts/page-orphanage.js"></script>
-  </body>
+        <div class="orphanage-details-content">
+          <h1>{{ orphanage.name }}</h1>
+
+          <p>
+            {{orphanage.about}}
+          </p>
+
+          <div class="map-container">
+            <div id="mapid"></div>
+            <span data-lat="{{orphanage.lat}}" data-lng="{{orphanage.lng}}"></span>
+
+            <footer>
+              <a target="_blank" href="https://maps.google.com/mobile?q={{orphanage.lat}},{{orphanage.lng}}&z=15">Ver
+                rotas no Google Maps</a>
+            </footer>
+          </div>
+
+          <hr />
+
+          <h2>Instruções para visita</h2>
+
+          <p>
+            {{orphanage.instructions}}
+          </p>
+
+          <div class="open-details">
+            <div class="hour">
+              <img src="/images/clock.svg" alt="Horários" />
+              {{orphanage.opening_hours}}
+            </div>
+
+            {{#if orphanage.open_on_weekends}}
+            <div class="open-on-weekends open">
+              <img src="/images/info.svg" alt="Informações" />
+              Atendemos fim de semana
+            </div>
+            {{else}}
+            <div class="open-on-weekends closed">
+              <img src="/images/info-red.svg" alt="Informações" />
+              Não atendemos fim de semana
+            </div>
+            {{/if}}
+
+          </div>
+
+          <a href="https://api.whatsapp.com/send?l=pt-pt_BR&phone={{orphanage.whatsapp}}&text=Oi, quero conversar sobre visitas no {{orphanage.name}}."
+            target="_blank" class="primary-button" type="button">
+            <img src="/images/whatsapp.svg" alt="Chamar no whatsapp" />
+            Entrar em contato
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/scripts/page-orphanage.js"></script>
+</body>
+
 </html>

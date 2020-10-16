@@ -1,56 +1,58 @@
 .primary-button {
-    margin-top: 6.4rem;
+  margin-top: 6.4rem;
 
-    width: 100%;
-    height: 6.4rem;
-    border: 0;
+  width: 100%;
+  height: 6.4rem;
+  border: 0;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    background: #3CDC8C;
+  background: #3cdc8c;
 
-    border-radius: 2rem;
-    color: white;
+  border-radius: 2rem;
+  color: white;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    transition: background-color .2s;
+  transition: background-color 0.2s;
+
+  text-decoration: none;
 }
 
 .primary-button:hover {
-    background: #36CF82;
+  background: #36cf82;
 }
 
 .primary-button img {
-    margin-right: 1.6rem;
+  margin-right: 1.6rem;
 }
 
 .button-select {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .button-select button {
-    height: 6.4rem;
-    background: #F5F8FA;
-    border: 1px solid #D3E2E5;
-    color: #5C8599;
+  height: 6.4rem;
+  background: #f5f8fa;
+  border: 1px solid #d3e2e5;
+  color: #5c8599;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .button-select button.active {
-    background: #EDFFF6;
-    border: 1px solid #A1E9C5;
-    color: #37C77F;
+  background: #edfff6;
+  border: 1px solid #a1e9c5;
+  color: #37c77f;
 }
 
 .button-select button:first-child {
-    border-radius: 2rem 0 0 2rem;
+  border-radius: 2rem 0 0 2rem;
 }
 
 .button-select button:last-child {
-    border-radius: 0 2rem 2rem 0;
+  border-radius: 0 2rem 2rem 0;
 }
